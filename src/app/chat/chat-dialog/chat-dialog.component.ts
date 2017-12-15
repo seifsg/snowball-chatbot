@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { ChatService, Message } from '../chat.service';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/scan';
-import { setInterval } from 'timers';
 
 @Component({
   selector: 'app-chat-dialog',
@@ -30,7 +29,8 @@ export class ChatDialogComponent implements OnInit {
       if (mE.scrollTop < mEtarget && mEtarget > 0) {
         mE.scrollTop = mEtarget;
       }else {
-        clearInterval(t._id);
+        console.log('clearing');
+        clearInterval(t);
       }
     }, 100);
     setTimeout(() => clearInterval(t), 300);
