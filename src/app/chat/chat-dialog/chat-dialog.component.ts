@@ -24,16 +24,10 @@ export class ChatDialogComponent implements OnInit {
 
   scrollDown() {
     const mE = document.getElementById('messages');
-    const t = setInterval(() => {
+    setTimeout(() => {
       const mEtarget = mE.scrollHeight - mE.clientHeight;
-      if (mE.scrollTop < mEtarget && mEtarget > 0) {
         mE.scrollTop = mEtarget;
-      }else {
-        console.log('clearing');
-        clearInterval(t);
-      }
     }, 100);
-    setTimeout(() => clearInterval(t), 300);
   }
 
   sendMessage() {
