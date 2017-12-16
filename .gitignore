@@ -32,6 +32,7 @@
 npm-debug.log
 testem.log
 /typings
+/src/...bfg-report
 
 # e2e
 /e2e/*.js
@@ -40,5 +41,7 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
-/src/environments
-/src/...bfg-report
+
+#config
+/src/environments/environment.ts
+/src/environments/environment.prod.ts
